@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import getData from './GetMovies.js';
-
+import Nav from './Nav';
+import Gallery from './Gallery';
 
 class Movies extends Component {
     constructor(props){
