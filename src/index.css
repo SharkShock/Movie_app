@@ -10,7 +10,7 @@ body {
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
+  
 }
 
 ul, nav {
@@ -114,13 +114,6 @@ a.btn:hover {
   border: 1px solid #ffffff50;
 }
 
-.Previous .Next {
-  margin: 1000px 1000px 1000px 1000px;
-  display: flex;
-  z-index: 10;
-  position: relative;
-  box-shadow: 4px 8px 16px rgba(255, 255, 255, 0.2);
-}
 
 .Table {
   background-color: rgba(7, 7, 7, 0.822);
@@ -129,23 +122,6 @@ a.btn:hover {
   padding: 100px 100px;
   cursor: pointer;
   transition: 1s all;
-}
-
-.title {
-  position: absolute;
-  top: 35%;
-  left: 40%;
-}
-
-.year {
-  position: absolute;
-  top: 35%;
-  right: 30%;
-}
-
-.year_result {
-  position: absolute;
-  right: 30%;
 }
 
 
@@ -177,9 +153,7 @@ a.btn:hover {
     padding: 20px;
   }
 
-  .madeby {
-    padding: 30px 20px;
-  }
+
 }
 
 

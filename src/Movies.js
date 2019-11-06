@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import getData from './GetMovies.js';
 
+
 class Movies extends Component {
     constructor(props){
         super(props);
@@ -37,26 +38,30 @@ class Movies extends Component {
     return (
       <div className="App" >
         <div className="Table">
-           <tr>
-               <th className="title">Title</th>
-               <th className="year">Year</th>
-           </tr>
+    {   //<tr>
+          //<th className="title">Title</th>
+          //<th className="year">Year</th>
+        //</tr>
+    } 
         { this.state.data.Search !== undefined ? (this.state.data.Search.map(m => 
-         <tr className="result">
-             <td className="title_result">
-             {m.Title}
+         <tr>
+             <td className="result">
+             <p>Year : {m.Year}</p>
+             <p>Title : {m.Title}</p>
+             <p>____________________</p>           
              </td>
-             <td className="year_result">
-             {m.Year}
-             </td>
+
          </tr>
         )): ('')     
         }    
         </div>
+        <p>
         <br></br>
         <a href="#" className = "Previous" onClick={this.onClickPrevious}>Previous</a>      
         <a href="#" className = "Next" onClick={this.onClickNext}>Next</a>
-
+        <br></br>
+        <br></br>
+        </p>
      </div>
     );
   }
