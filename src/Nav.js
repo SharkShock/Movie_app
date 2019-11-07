@@ -10,7 +10,8 @@ function Nav() {
 
   return (
     <nav>
-      <h2 className="logo">MOVIES</h2>
+      
+      <h2 className="logo">  MOVIES</h2>
       <ul className="nav-links">
         <Link to="Movie_list">
           <li className="btn">Movie List</li>

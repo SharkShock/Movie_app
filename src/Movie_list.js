@@ -35,34 +35,32 @@ class Movie_list extends Component {
 render() {
 
   return (
-    <div className="App" >
-
+    <div>
       <div className="cover">
-      <h1>List of movies</h1>
+      <h1> <img src={require('./img/cover.png')} /> List of movies </h1>
+      
       </div>
 
       <div className="pandn">     
-      <a href="#" className="Previous" onClick={this.onClickPrevious}>Previous</a>     
-      <a href="#" className="Next" onClick={this.onClickNext}>Next</a>
+      <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious}/>     
+      <input type="button" value="Next" className="Next" onClick={this.onClickNext}/>
       </div>
      
-      <div className="Table">
+      <table>
       { this.state.data.Search !== undefined ? (this.state.data.Search.map(m => 
-       <tr>
+       <tr className="movielist">
            <td className="result">
-           <p> <img src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
-           <p> <img src={require('./img/line.png')} /></p>  
-                    
+           <p className> <img src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>                   
            </td>
        </tr>
 
        
       )): ('')     
       }    
-      </div>
+      </table>
       <div className="pandn">     
-      <a href="#" className="Previous" onClick={this.onClickPrevious}>Previous</a>     
-      <a href="#" className="Next" onClick={this.onClickNext}>Next</a>
+      <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious}/>     
+      <input type="button" value="Next" className="Next" onClick={this.onClickNext}/>
       </div>
    </div>
   );

@@ -131,17 +131,6 @@ header nav li {
 }
 
 
-.Table {
-  position: relative;
-  left: 25%;
-  width: 50%;
-  background-color: rgba(7, 7, 7, 0.822);
-  border: 1px solid rgba(255, 255, 255, 0.267);
-  color: #ffffff;
-  padding: 100px 100px;
-  cursor: pointer;
-  transition: 1s all;
-}
 
 .pandn {
   text-align: center;
@@ -150,8 +139,34 @@ header nav li {
     padding: 50px 0 50px 0;
 }
 
+ .item {
+   display:inline-block;
+   border: 1px solid rgb(255, 255, 255);
+ }
 
-@media all and (max-width: 1024px) {
+.movielist {
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.822);
+  border: 2px solid rgba(255, 255, 255, 0.013);
+  color: #ffffff;
+  padding: 0 10px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+ Table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(7, 7, 7, 0.671);
+  border: 1px solid rgba(255, 255, 255, 0);
+  color: #ffffff;
+  padding: 50px 100px;
+  cursor: pointer;
+  transition: 1s all;
+ }
+
+@media all and (max-width: 768px) {
   body {
     font-size: 1rem;
   }
@@ -166,11 +181,16 @@ header nav li {
     padding: 0 10px;
   }
 
+  .coverimg {
+
+    width: 100%;
+    padding: 70px;
+  }
 
 }
 
 
-@media all and (max-width: 414px) {
+@media all and (max-width: 375px) {
   
   nav {
     width: 100%;
