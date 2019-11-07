@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Nav />
       <Switch>
-        <Route path="/" exact component={Home}/>
+        <Route path="/" exact component={Movie_list}/>
         <Route path="/Movie_gallery" component={Movie_gallery}/>
         <Route path="/Movie_list" component={Movie_list}/>
       </Switch>
@@ -20,10 +20,5 @@ function App() {
   );
 }
 
-const Home = () => (
-  <div>
-    <h1>Home Page</h1>
-  </div>
-);
 
 export default App;

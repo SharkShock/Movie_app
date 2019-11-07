@@ -50,11 +50,13 @@ render() {
       { this.state.data.Search !== undefined ? (this.state.data.Search.map(m => 
        <tr>
            <td className="result">
-           <p>Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
-           <p>____________________</p>           
+           <p> <img src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
+           <p> <img src={require('./img/line.png')} /></p>  
+                    
            </td>
-
        </tr>
+
+       
       )): ('')     
       }    
       </div>
