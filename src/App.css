@@ -27,7 +27,7 @@ nav {
 }
 
 .nav-links {
-  width: 20%;
+  
   padding: 0 50px;
   display: flex;
   justify-content: space-around;
@@ -115,7 +115,7 @@ header nav li {
   background-color: rgba(7, 7, 7, 0.822);
   border: 1px solid rgb(255, 255, 255);
   color: #ffffff;
-  padding: 10px 125px;
+  padding: 10px 112px;
   cursor: pointer;
   transition: 1s all;
 }
@@ -130,19 +130,19 @@ header nav li {
   border: 1px solid #ffffff50;
 }
 
-
-
 .pandn {
   text-align: center;
-    display: block;
-    margin: 0 auto;
-    padding: 50px 0 50px 0;
+  display: block;
+  margin: 0 auto;
+  padding: 50px 0 50px 0;
 }
 
  .item {
-   display:inline-block;
-   border: 1px solid rgb(255, 255, 255);
- }
+  display:inline-block;
+  border: 1px solid rgb(255, 255, 255);
+  max-width: 302px;
+  height: 570px;
+}
 
 .movielist {
   width: 100%;
@@ -161,7 +161,7 @@ header nav li {
   background-color: rgba(7, 7, 7, 0.671);
   border: 1px solid rgba(255, 255, 255, 0);
   color: #ffffff;
-  padding: 50px 100px;
+  padding: 50px 150px;
   cursor: pointer;
   transition: 1s all;
  }
@@ -175,10 +175,8 @@ header nav li {
     font-size: 2rem;
   }
 
-  .Table {
-    left: 8px;
-    width: 98%;
-    padding: 0 10px;
+  Table {
+    padding: 50px 20px;
   }
 
   .coverimg {
@@ -190,10 +188,22 @@ header nav li {
 }
 
 
-@media all and (max-width: 375px) {
-  
+@media all and (max-width: 414px) {
+
   nav {
     width: 100%;
+    padding: 0;
+  }
+
+  .nav-links {
+    width: 100%;
+    padding: 0;
+
+  }
+
+  .logo {
+    color: white;
+    padding: 0px 10px;  
   }
 
   .cover {
@@ -201,13 +211,11 @@ header nav li {
     width: 100%;
     flex-direction: column;
   }
-
-  .Table {
-    left: 5px;
-    width: 98%;
-    padding: 0 10px;
-  }
   
+  Table {
+    padding: 50px 10px;
+   }
+
   .Previous {
     padding: 10px 10px;
   }
