@@ -57,10 +57,9 @@ render() {
               <img src={m.Poster} />
               <p >Title : {m.Title}</p>
               <p>Year : {m.Year}</p>
-            </div> 
+            </div>
            </td>
        </tr>
-
        
       )): ('')     
       } 

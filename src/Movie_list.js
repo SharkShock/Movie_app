@@ -15,19 +15,19 @@ class Movie_list extends Component {
 
   componentWillMount() {
       getData(this.state.searchId,this.state.page).then(response => this.setState({data:response}))
-}
+    }
 
   onClickNext= () => {
       var pageNum = this.state.page + 1;
       this.setState({page:pageNum});
       getData(this.state.searchId,this.state.page).then(response => this.setState({data:response}));
-  }
+    }
 
   onClickPrevious= () => {
       var pageNum = this.state.page - 1;
       this.setState({page:pageNum});
       getData(this.state.searchId,this.state.page).then(response => this.setState({data:response}));
-  }
+    }
 
 
 
