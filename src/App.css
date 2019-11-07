@@ -1,20 +1,197 @@
-.App {
-  text-align: center;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  background: linear-gradient(rgb(0, 0, 0), rgba(24, 17, 13, 0)), url(./img/background.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
 }
 
 nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
-  background: rgb(24, 63, 114);
-  color: white;
+  min-height: 5vh;
+  background: rgba(1, 8, 26, 0.883);
+  z-index: 9;
 }
 
 .nav-links {
-  width: 50%;
+  width: 20%;
+  padding: 0 50px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+
+
+ul, nav {
+  padding: 0 50px;
+  list-style-type: none;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 10rem 0 1.5rem;
+  color: #ffffffcb;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  position: fixed;
+  padding: 10px 100px 0;
+}
+
+header nav ul {
+  display: flex;
+}
+
+header nav li {
+  margin: 0 15px;
+}
+
+.logo {
+  color: white;
+  padding: 0px 50px;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  transition: 1s all;
+}
+
+.btn:hover {
+  background-color: rgba(255, 136, 0, 0.65);
+  border: 1px solid;
+  color: #ffffff;
+}
+
+
+.cover {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Previous {
+  background-color: rgba(7, 7, 7, 0.822);
+  border: 1px solid rgb(255, 255, 255);
+  color: #ffffff;
+  padding: 10px 100px;
+  cursor: pointer;
+  transition: 1s all;
+  margin-top: 50px;
+}
+
+.Next {
+  background-color: rgba(7, 7, 7, 0.822);
+  border: 1px solid rgb(255, 255, 255);
+  color: #ffffff;
+  padding: 10px 125px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.Next:hover {
+  background-color: rgba(255, 136, 0, 0.8);
+  border: 1px solid #ffffff50;
+}
+
+.Previous:hover {
+  background-color: rgba(92, 49, 0, 0.8);
+  border: 1px solid #ffffff50;
+}
+
+
+.Table {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  background-color: rgba(7, 7, 7, 0.822);
+  border: 1px solid rgba(255, 255, 255, 0.267);
+  color: #ffffff;
+  padding: 100px 100px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.pandn {
+  text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 50px 0 50px 0;
+}
+
+
+@media all and (max-width: 1024px) {
+  body {
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .Table {
+    left: 8px;
+    width: 98%;
+    padding: 0 10px;
+  }
+}
+
+
+@media all and (max-width: 414px) {
+  
+  nav {
+    width: 100%;
+  }
+
+  .cover {
+    height: 180px;
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .Table {
+    left: 5px;
+    width: 98%;
+    padding: 0 10px;
+  }
+  
+  .Previous {
+    padding: 10px 10px;
+  }
+  
+  .Next {
+    padding: 10px 25px;
+  }
+
 }

@@ -5,20 +5,18 @@ import {Link} from 'react-router-dom'
 
 
 function Nav() {
-  const navStyle = {
-    color: 'white'
-  };
+  
 
 
   return (
     <nav>
-      <h3>logo</h3>
+      <h2 className="logo">MOVIES</h2>
       <ul className="nav-links">
-        <Link style={navStyle} to="Movie_list">
-          <li>Movie List</li>
+        <Link to="Movie_list">
+          <li className="btn">Movie List</li>
         </Link>
-        <Link style={navStyle} to="/Movie_gallery">
-          <li>Movie Gallery</li>
+        <Link to="/Movie_gallery">
+          <li className="btn">Movie Gallery</li>
         </Link>
       </ul>
     </nav>
@@ -26,3 +24,4 @@ function Nav() {
 }
 
 export default Nav;
+

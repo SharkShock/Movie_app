@@ -36,17 +36,21 @@ render() {
 
   return (
     <div className="App" >
+
+      <div className="cover">
+      <h1>List of movies</h1>
+      </div>
+
+      <div className="pandn">     
+      <a href="#" className="Previous" onClick={this.onClickPrevious}>Previous</a>     
+      <a href="#" className="Next" onClick={this.onClickNext}>Next</a>
+      </div>
+     
       <div className="Table">
-  {   //<tr>
-        //<th className="title">Title</th>
-        //<th className="year">Year</th>
-      //</tr>
-  } 
       { this.state.data.Search !== undefined ? (this.state.data.Search.map(m => 
        <tr>
            <td className="result">
-           <p>Year : {m.Year}</p>
-           <p>Title : {m.Title}</p>
+           <p>Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
            <p>____________________</p>           
            </td>
 
@@ -54,13 +58,10 @@ render() {
       )): ('')     
       }    
       </div>
-      <p>
-      <br></br>
-      <a href="#" className = "Previous" onClick={this.onClickPrevious}>Previous</a>      
-      <a href="#" className = "Next" onClick={this.onClickNext}>Next</a>
-      <br></br>
-      <br></br>
-      </p>
+      <div className="pandn">     
+      <a href="#" className="Previous" onClick={this.onClickPrevious}>Previous</a>     
+      <a href="#" className="Next" onClick={this.onClickNext}>Next</a>
+      </div>
    </div>
   );
 }
