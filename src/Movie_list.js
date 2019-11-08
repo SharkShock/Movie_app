@@ -1,7 +1,7 @@
 import './App.css';
 import getData from './GetMovies.js';
 import React, { Component } from 'react';
-import Search from "./Search";
+
 
 class Movie_list extends Component {
   constructor(props) {
@@ -30,10 +30,37 @@ class Movie_list extends Component {
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  handleOnInputChange = (event) => {
-    const query = event.target.value;
-    this.setState({ query, loading: true, message: '' });
-  };
+
+
+  onClick1 = () => {
+    var pageNum = this.setState.page = 1;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick2 = () => {
+    var pageNum = this.setState.page = 2;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick3 = () => {
+    var pageNum = this.setState.page = 3;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick4 = () => {
+    var pageNum = this.setState.page = 4;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick5 = () => {
+    var pageNum = this.setState.page = 5;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
 
 
   render() {
@@ -41,22 +68,13 @@ class Movie_list extends Component {
     return (
       <div>
         <div className="cover">
-          <h1> <img src={require('./img/cover.png')} /> List of movies </h1>
+          <h1> <img alt="" src={require('./img/cover.png')} /> List of movies </h1>
         </div>
-
-        <div className="search">
-          <Search />
-        </div>
-        <div className="pandn">
-          <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious} />
-          <input type="button" value="Next" className="Next" onClick={this.onClickNext} />
-        </div>
-
         <table>
           {this.state.data.Search !== undefined ? (this.state.data.Search.map(m =>
             <tr className="movielist">
               <td className="result">
-                <p className> <img src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
+                <p className> <img alt="" src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
               </td>
             </tr>
 
@@ -66,6 +84,11 @@ class Movie_list extends Component {
         </table>
         <div className="pandn">
           <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious} />
+          <input type="button" value="1" className="pagBtn" onClick={this.onClick1} />
+          <input type="button" value="2" className="pagBtn" onClick={this.onClick2} />
+          <input type="button" value="3" className="pagBtn" onClick={this.onClick3} />
+          <input type="button" value="4" className="pagBtn" onClick={this.onClick4} />
+          <input type="button" value="5" className="pagBtn" onClick={this.onClick5} />
           <input type="button" value="Next" className="Next" onClick={this.onClickNext} />
         </div>
       </div>

@@ -81,14 +81,14 @@ header nav li {
 .btn {
   color: #ffffff;
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.116);
   transition: 1s all;
 }
 
 .btn:hover {
-  background-color: rgba(255, 136, 0, 0.65);
+  background-color: rgb(255, 136, 0);
   border: 1px solid;
-  color: #ffffff;
+  color: rgb(0, 0, 0)
 }
 
 
@@ -103,7 +103,7 @@ header nav li {
 
 .Previous {
   background-color: rgba(7, 7, 7, 0.822);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.116);
   color: #ffffff;
   padding: 10px 100px;
   cursor: pointer;
@@ -112,7 +112,7 @@ header nav li {
 
 .Next {
   background-color: rgba(7, 7, 7, 0.822);
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.116);
   color: #ffffff;
   padding: 10px 112px;
   cursor: pointer;
@@ -120,13 +120,15 @@ header nav li {
 }
 
 .Next:hover {
-  background-color: rgba(255, 136, 0, 0.8);
-  border: 1px solid #ffffff50;
+  background-color: rgb(255, 136, 0);
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  color: black;
 }
 
 .Previous:hover {
-  background-color: rgba(92, 49, 0, 0.8);
-  border: 1px solid #ffffff50;
+  background-color: rgb(255, 136, 0);
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  color: black;
 }
 
 .pandn {
@@ -165,12 +167,19 @@ header nav li {
   transition: 1s all;
  }
 
-.search {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.pagBtn { 
+  background-color: rgba(7, 7, 7, 0.822);
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  color: #ffffff;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 1s all;
+}
+
+.pagBtn:hover {
+  background-color: rgb(255, 217, 0);
+  border: 1px solid rgba(255, 255, 255, 0.116);
+  color: black;
 }
 
 @media all and (max-width: 768px) {
