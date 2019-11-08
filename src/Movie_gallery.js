@@ -30,7 +30,6 @@ class Movie_gallery extends Component {
 
 
 
-
   onClick1 = () => {
     var pageNum = this.setState.page = 1;
     this.setState({ page: pageNum });
