@@ -67,7 +67,7 @@ class Movie_gallery extends Component {
     return (
       <div>
         <div className="cover">
-          <h1> <img src={require('./img/cover.png')} /> Movies Gallery </h1>
+          <h1> <img alt="" src={require('./img/cover.png')} /> Movies Gallery </h1>
         </div>
         <div>
           <table>
@@ -75,7 +75,7 @@ class Movie_gallery extends Component {
               <tr>
                 <td className="result">
                   <div className="item">
-                    <img src={m.Poster} />
+                    <img alt="" src={m.Poster} />
                     <p >Title : {m.Title}</p>
                     <p>Year : {m.Year}</p>
                   </div>

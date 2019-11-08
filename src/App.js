@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Nav from './Nav';
+import Nav from './components/nav/Index';
 import Movie_list from './Movie_list';
 import Movie_gallery from './Movie_gallery';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
