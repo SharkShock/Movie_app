@@ -27,7 +27,7 @@ class Movie_gallery extends Component {
 
   onClickPrevious = () => {
     var pageNum = this.state.page - 1;
-    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 1; 
+    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
@@ -46,7 +46,7 @@ class Movie_gallery extends Component {
 
   onClick1 = () => {
     var pageNum = this.setState.page = this.state.page + 1;
-    pageNum = pageNum > 15625 ? this.state.page : this.state.page + 1; 
+    pageNum = pageNum > 15625 ? this.state.page : this.state.page + 1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
@@ -60,15 +60,15 @@ class Movie_gallery extends Component {
 
   onClickminus1 = () => {
 
-    var pageNum = this.setState.page = this.state.page-1;
-    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 1; 
+    var pageNum = this.setState.page = this.state.page - 1;
+    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
   onClickminus2 = () => {
-    var pageNum = this.setState.page = this.state.page-2;
-    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 2; 
+    var pageNum = this.setState.page = this.state.page - 2;
+    pageNum = pageNum <= 0 ? this.state.page : this.state.page - 2;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
@@ -77,7 +77,7 @@ class Movie_gallery extends Component {
 
 
     return (
-      
+
       <div>
         <div className="cover">
           <h1> <img alt="" src={require('./img/cover.png')} /> Movies Gallery </h1>
@@ -99,16 +99,16 @@ class Movie_gallery extends Component {
             }
           </table>
           <div className="pandn">
-          <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious} />
-          <input type="button" value="First page" className="pagBtn" onClick={ this.onClickfirst} />
-          {this.state.page - 2 > 0 ?  <input type="button" value={ this.state.page -2} className="pagBtn" onClick={ this.onClickminus2} />: ""}
-          {this.state.page - 1 > 0 ? <input type="button" value={ this.state.page - 1} className="pagBtn" onClick={ this.onClickminus1} /> : ""}
-          <input type="button" value={ this.state.page} className="CurpagBtn" onClick={ this.state.page} />
-          {this.state.page + 1 <= 15625 ? <input type="button" value={ this.state.page + 1} className="pagBtn" onClick={ this.onClick1} /> : ""}
-          {this.state.page + 2 <= 15625 ? <input type="button" value={ this.state.page + 2} className="pagBtn" onClick={ this.onClick1} /> : ""}
-          <input type="button" value="Last page" className="pagBtn" onClick={ this.onClickLast} />
-          <input type="button" value="Next" className="Next" onClick={this.onClickNext} />
-        </div>   
+            <input type="button" value="<<" className="pagBtn" onClick={this.onClickfirst} />
+            <input type="button" value="<" className="pagBtn" onClick={this.onClickPrevious} />
+            {this.state.page - 2 > 0 ? <input type="button" value={this.state.page - 2} className="pagBtn" onClick={this.onClickminus2} /> : ""}
+            {this.state.page - 1 > 0 ? <input type="button" value={this.state.page - 1} className="pagBtn" onClick={this.onClickminus1} /> : ""}
+            <input type="button" value={this.state.page} className="CurpagBtn" onClick={this.state.page} />
+            {this.state.page + 1 <= 15625 ? <input type="button" value={this.state.page + 1} className="pagBtn" onClick={this.onClick1} /> : ""}
+            {this.state.page + 2 <= 15625 ? <input type="button" value={this.state.page + 2} className="pagBtn" onClick={this.onClick1} /> : ""}
+            <input type="button" value=">" className="pagBtn" onClick={this.onClickNext} />
+            <input type="button" value=">>" className="pagBtn" onClick={this.onClickLast} />
+          </div>
         </div>
       </div>
     );

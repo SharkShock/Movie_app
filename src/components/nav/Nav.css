@@ -55,7 +55,7 @@ header nav li {
 }
 
 .btn:hover {
-    background-color: rgb(255, 136, 0);
+    background-color: rgba(97, 219, 251);
     border: 1px solid;
     color: rgb(0, 0, 0)
 }
