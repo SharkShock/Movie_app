@@ -13,7 +13,6 @@ class Movie_list extends Component {
     }
   }
 
-
   componentWillMount() {
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }))
   }
@@ -30,42 +29,48 @@ class Movie_list extends Component {
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-
-
-  onClick1 = () => {
+  onClickfirst = () => {
     var pageNum = this.setState.page = 1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
+  onClickLast = () => {
+    var pageNum = this.setState.page = 15625;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick1 = () => {
+    var pageNum = this.setState.page = this.state.page+1;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
   onClick2 = () => {
-    var pageNum = this.setState.page = 2;
+    var pageNum = this.setState.page = this.state.page+2;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  onClick3 = () => {
-    var pageNum = this.setState.page = 3;
+  onClickminus1 = () => {
+    var pageNum = this.setState.page = this.state.page-1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  onClick4 = () => {
-    var pageNum = this.setState.page = 4;
+  onClickminus2 = () => {
+    var pageNum = this.setState.page = this.state.page-2;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  onClick5 = () => {
-    var pageNum = this.setState.page = 5;
-    this.setState({ page: pageNum });
-    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
-  }
 
 
   render() {
-
+    
     return (
+
       <div>
         <div className="cover">
           <h1> <img alt="" src={require('./img/cover.png')} /> List of movies </h1>
@@ -74,7 +79,7 @@ class Movie_list extends Component {
           {this.state.data.Search !== undefined ? (this.state.data.Search.map(m =>
             <tr className="movielist">
               <td className="result">
-                <p className> <img alt="" src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
+                <p> <img alt="" src={require('./img/movie-ico.png')} /> Title : {m.Title} &nbsp;&nbsp; | &nbsp;&nbsp; Year : {m.Year}</p>
               </td>
             </tr>
 
@@ -84,11 +89,13 @@ class Movie_list extends Component {
         </table>
         <div className="pandn">
           <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious} />
-          <input type="button" value="1" className="pagBtn" onClick={this.onClick1} />
-          <input type="button" value="2" className="pagBtn" onClick={this.onClick2} />
-          <input type="button" value="3" className="pagBtn" onClick={this.onClick3} />
-          <input type="button" value="4" className="pagBtn" onClick={this.onClick4} />
-          <input type="button" value="5" className="pagBtn" onClick={this.onClick5} />
+          <input type="button" value="First page" className="pagBtn" onClick={ this.onClickfirst} />
+          <input type="button" value={ this.state.page -2} className="pagBtn" onClick={ this.onClickminus2} />
+          <input type="button" value={ this.state.page - 1} className="pagBtn" onClick={ this.onClickminus1} />
+          <input type="button" value={ this.state.page} className="CurpagBtn" onClick={ this.state.page} />
+          <input type="button" value={ this.state.page + 1} className="pagBtn" onClick={this.onClick1} />
+          <input type="button" value={ this.state.page + 2} className="pagBtn" onClick={this.onClick2} />
+          <input type="button" value="Last page" className="pagBtn" onClick={ this.onClickLast} />
           <input type="button" value="Next" className="Next" onClick={this.onClickNext} />
         </div>
       </div>

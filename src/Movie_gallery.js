@@ -2,6 +2,7 @@ import './App.css';
 import getData from './GetMovies.js';
 import React, { Component } from 'react';
 
+
 class Movie_gallery extends Component {
   constructor(props) {
     super(props);
@@ -11,6 +12,7 @@ class Movie_gallery extends Component {
       searchId: 'for'
     }
   }
+
 
   componentWillMount() {
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }))
@@ -28,34 +30,38 @@ class Movie_gallery extends Component {
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-
-
-  onClick1 = () => {
+  onClickfirst = () => {
     var pageNum = this.setState.page = 1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
+  onClickLast = () => {
+    var pageNum = this.setState.page = 15625;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
+  onClick1 = () => {
+    var pageNum = this.setState.page = this.state.page+1;
+    this.setState({ page: pageNum });
+    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
+  }
+
   onClick2 = () => {
-    var pageNum = this.setState.page = 2;
+    var pageNum = this.setState.page = this.state.page+2;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  onClick3 = () => {
-    var pageNum = this.setState.page = 3;
+  onClickminus1 = () => {
+    var pageNum = this.setState.page = this.state.page-1;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
 
-  onClick4 = () => {
-    var pageNum = this.setState.page = 4;
-    this.setState({ page: pageNum });
-    getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
-  }
-
-  onClick5 = () => {
-    var pageNum = this.setState.page = 5;
+  onClickminus2 = () => {
+    var pageNum = this.setState.page = this.state.page-2;
     this.setState({ page: pageNum });
     getData(this.state.searchId, this.state.page).then(response => this.setState({ data: response }));
   }
@@ -87,11 +93,13 @@ class Movie_gallery extends Component {
         </div>
         <div className="pandn">
           <input type="button" value="Previous" className="Previous" onClick={this.onClickPrevious} />
-          <input type="button" value="1" className="pagBtn" onClick={this.onClick1} />
-          <input type="button" value="2" className="pagBtn" onClick={this.onClick2} />
-          <input type="button" value="3" className="pagBtn" onClick={this.onClick3} />
-          <input type="button" value="4" className="pagBtn" onClick={this.onClick4} />
-          <input type="button" value="5" className="pagBtn" onClick={this.onClick5} />
+          <input type="button" value="First page" className="pagBtn" onClick={ this.onClickfirst} />
+          <input type="button" value={ this.state.page -2} className="pagBtn" onClick={ this.onClickminus2} />
+          <input type="button" value={ this.state.page - 1} className="pagBtn" onClick={ this.onClickminus1} />
+          <input type="button" value={ this.state.page} className="CurpagBtn" onClick={ this.state.page} />
+          <input type="button" value={ this.state.page + 1} className="pagBtn" onClick={this.onClick1} />
+          <input type="button" value={ this.state.page + 2} className="pagBtn" onClick={this.onClick2} />
+          <input type="button" value="Last page" className="pagBtn" onClick={ this.onClickLast} />
           <input type="button" value="Next" className="Next" onClick={this.onClickNext} />
         </div>
       </div>
@@ -101,4 +109,3 @@ class Movie_gallery extends Component {
 
 
 export default Movie_gallery;
-

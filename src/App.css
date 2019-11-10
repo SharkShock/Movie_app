@@ -109,6 +109,15 @@ Table {
     transition: 1s all;
 }
 
+.CurpagBtn {
+    background-color: rgba(255, 255, 255, 0.541);
+    border: 1px solid rgba(255, 255, 255, 0.116);
+    color: #000000;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 1s all;
+}
+
 .pagBtn:hover {
     background-color: rgb(255, 217, 0);
     border: 1px solid rgba(255, 255, 255, 0.116);
