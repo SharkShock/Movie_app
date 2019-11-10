@@ -1,8 +1,7 @@
 import React from 'react';
 import './Nav.css';
 import { Link } from 'react-router-dom';
-
-
+import './img/logo.png'
 
 function Nav() {
 
@@ -11,7 +10,7 @@ function Nav() {
   return (
     <nav>
 
-      <h2 className="logo">  MOVIES</h2>
+      <h2 className="logo"> <img alt="" src={require('./img/logo.png')} /> </h2>
       <ul className="nav-links">
         <Link to="Movie_list">
           <li className="btn">Movie List</li>

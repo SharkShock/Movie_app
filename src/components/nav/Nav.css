@@ -50,7 +50,7 @@ header nav li {
 .btn {
     color: #ffffff;
     padding: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.116);
+    border: 1px solid rgba(255, 255, 255, 0);
     transition: 1s all;
 }
 
